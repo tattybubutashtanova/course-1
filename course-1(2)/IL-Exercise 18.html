@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button class="open-modal-btn">Click Me!</button>
+
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Hi</h3>
+        <p>Thanks for clicking</p>
+    </div>
+
+</div>
+
+<script>
+    var modal = document.getElementById("myModal");
+
+    var btn = document.querySelector(".open-modal-btn");
+
+    var closeBtn = document.querySelector(".close-btn");
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

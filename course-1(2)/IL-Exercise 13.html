@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Accessible User Information Form</h2>
+
+<form action="#" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" aria-required="true" aria-label="Full Name" required>
+    <br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" aria-required="true" aria-label="Email Address" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" aria-required="true" aria-describedby="passwordHelp" required>
+<br>
+    <label for="country">Country:</label>
+    <select id="country" name="country" aria-label="Select your country">
+        <option value="">-- Select your country --</option>
+        <option value="kyrgyzstan">Kyrgyzstan</option>
+    </select>
+    <br>
+    <label id="messageLabel" for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" aria-labelledby="messageLabel" placeholder="Type something here..."></textarea>
+
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

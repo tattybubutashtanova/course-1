@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .custom-checkbox {
+            display: none;
+        }
+        .custom-checkbox-label {
+            position: relative;
+            cursor: pointer;
+            padding-left: 30px;
+            font-size: 18px;
+            user-select: none;
+        }
+        .custom-checkbox-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4CAF50;
+            background-color: white;
+            border-radius: 4px;
+        }
+        .custom-checkbox:checked + .custom-checkbox-label::before {
+            background-color: #4CAF50;
+            content: '✔';
+            color: white;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<label>
+    <input type="checkbox" class="custom-checkbox">
+    <span class="custom-checkbox-label">Custom Checkbox</span>
+</label>
+
+</body>
+</html>
